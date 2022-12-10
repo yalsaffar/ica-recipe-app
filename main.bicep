@@ -34,7 +34,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   }
 }
 
-module appService 'module/moudles.bicep' = {
+module appService 'module/modules.bicep' = {
   name: 'appService'
   params: {
     location: location
