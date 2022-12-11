@@ -13,7 +13,7 @@ param dbname string
 ])
 param environmentType string
 
-var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'F1'
+var appServicePlanSkuName = (environmentType == 'prod') ? 'P2V3' : 'B1'
 
 resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
   name: appServicePlanName
