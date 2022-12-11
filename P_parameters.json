@@ -9,7 +9,7 @@
             "value": "Yousif-assignment-ASP-prod-bicep"
         },
         "storageAccountName": {
-            "value": "jseijasprodstorage"
+            "value": "yousifstorageprod"
         }
     }
 }

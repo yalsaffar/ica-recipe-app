@@ -10,7 +10,7 @@ param appServicePlanName string = 'Yousif-assignment-asp-bicep'
 @minLength(3)
 @maxLength(40)
 
-param storageAccountName string = 'jseijasstorage'
+param storageAccountName string = 'YousifStorage'
 @allowed([
   'nonprod'
   'prod'
@@ -19,6 +19,16 @@ param storageAccountName string = 'jseijasstorage'
 
 param environmentType string = 'nonprod'
 param location string = resourceGroup().location
+
+@secure()
+param dbhost string
+@secure()
+param dbuser string
+@secure()
+param dbpass string
+@secure()
+param dbname string
+
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'
 
@@ -41,6 +51,10 @@ module appService 'module/modules.bicep' = {
     appServiceAppName: appServiceAppName
     appServicePlanName: appServicePlanName
     environmentType: environmentType
+    dbhost: dbhost
+    dbuser: dbuser
+    dbpass: dbpass
+    dbname: dbname
   }
 }
 
