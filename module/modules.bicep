@@ -19,6 +19,9 @@ resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
   name: appServicePlanName
   location: location
   kind: 'linux'
+  properties: {
+    reserved: true
+  }
   sku: {
     name: appServicePlanSkuName
   }
@@ -30,7 +33,7 @@ resource appServiceApp 'Microsoft.Web/sites@2022-03-01' = {
     serverFarmId: appServicePlan.id
     httpsOnly: true
     siteConfig: {
-    linuxFxVersion: 'python|3.10'
+      linuxFxVersion: 'python|3.10'
       appSettings: [
         {
           name: 'DBUSER'
