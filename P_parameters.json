@@ -2,14 +2,19 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "appServiceAppName": {
-            "value": "Yousif-assignment-app-prod-bicep"
+        "appServiceFEAppName": {
+            "value": "Yousif-assignment-app-bicep-prod-FE"
         },
-        "appServicePlanName": {
-            "value": "Yousif-assignment-ASP-prod-bicep"
+        "appServiceFEPlanName": {
+            "value": "Yousif-assignment-asp-bicep-prod-FE"
         },
+        "appServiceBEAppName": {
+            "value": "Yousif-assignment-app-bicep-prod-BE"
+        },
+        "appServiceBEPlanName": { 
+            "value": "Yousif-assignment-asp-bicep-prod-BE"},
         "storageAccountName": {
-            "value": "yousifstorageprod"
-        }
+            "value": "YousifStorage-prod"}
+
     }
 }
