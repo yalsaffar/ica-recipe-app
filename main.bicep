@@ -1,27 +1,26 @@
 @sys.description('The Web App.')
 @minLength(3)
 @maxLength(40)
-param appServiceFEAppName string = 'Yousif-assignment-app-bicep-FE'
-
+param appServiceFEAppName string 
 @sys.description('The App Service.')
 @minLength(3)
 @maxLength(40)
-param appServiceFEPlanName string = 'Yousif-assignment-asp-bicep-FE'
+param appServiceFEPlanName string 
 
 @sys.description('The Web App.')
 @minLength(3)
 @maxLength(40)
-param appServiceBEAppName string = 'Yousif-assignment-app-bicep-BE'
+param appServiceBEAppName string 
 
 @sys.description('The App Service.')
 @minLength(3)
 @maxLength(40)
-param appServiceBEPlanName string = 'Yousif-assignment-asp-bicep-BE'
+param appServiceBEPlanName string 
 
 @sys.description('The Storage.')
 @minLength(3)
 @maxLength(40)
-param storageAccountName string = 'YousifStorage'
+param storageAccountName string 
 @allowed([
   'nonprod'
   'prod'
