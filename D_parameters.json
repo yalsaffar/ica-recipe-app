@@ -14,7 +14,7 @@
         "appServiceBEPlanName": { 
             "value": "Yousif-assignment-asp-bicep-dev-BE"},
         "storageAccountName": {
-            "value": "YousifStoragedev"}
+            "value": "yousifstoragedev"}
 
     }
 }
